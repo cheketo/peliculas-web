@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>➕ Crear Nueva Película</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/crear.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Crear Nueva Película</h1>
+        </div>
+        <a href="index.html"><button>⬅ Volver</button></a>
+        <table class="form">
+            <tr>
+                <th><h2>💬 Título</h2></th>
+                <td><input type="text" name="title" id="title"></td>
+            </tr>
+            <tr>
+                <th><h2>🎬 Género</h2></th>
+                <td>
+                    <select id="genre">
+                        <option value="1">Drama</option>
+                        <option value="2">Comédia</option>
+                        <option value="3">Terror</option>
+                        <option value="4">Suspenso</option>
+                        <option value="5">Ciencia Ficcion</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>🧾 Descripción</h2></th>
+                <td><textarea name="description" id="description" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <th><h2>😎 Director</h2></th>
+                <td><select name="director" id="director">
+                    <option value="1">Francis Ford Coppola</option>
+                    <option value="2">Quentin Tarantino</option>
+                </select></td>
+            </tr>
+            <tr>
+                <th><h2>👨‍👩‍👦‍👦 Reparto</h2></th>
+                <td>
+                    <select name="cast" id="cast" multiple>
+                        <option value="1">Robert De Niro</option>
+                        <option value="2">Al Pacino</option>
+                        <option value="3">Joe Pesci</option>
+                        <option value="4">Antonio Banderas</option>
+                        <option value="5">Julia Roberts</option>
+                        <option value="6">Dustin Hoffman</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>⏱ Duración (en minutos)</h2></th>
+                <td><input name="length" id="length"></td>
+            </tr>
+            <tr>
+                <th><h2>📅 Fecha de Estreno</h2></th>
+                <td><input type="date" name="release" id="release"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="last-row">
+                    <button class="submit-button" onclick="crearPelicula()">➕ Crear</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

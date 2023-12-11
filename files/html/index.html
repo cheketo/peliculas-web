@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Películas</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/peliculas.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Películas</h1>
+        </div>
+        <a href="crear.html"><button>➕ Crear</button></a>
+        <table>
+            <thead>
+            <tr>
+                <th><h2>Título</h2></th>
+                <th><h2>Género</h2></th>
+                <th><h2>Descripción</h2></th>
+                <th><h2>Director</h2></th>
+                <th><h2>Reparto</h2></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tr>
+                <td>El Padrino</td>
+                <td>Drama</td>
+                <td>Un joven se ve involucrado en un asesinato de un jefe de la mafia.</td>
+                <td>Franco</td>
+                <td>Al Pacino, Marlon Brando, James Caan, Richard S. Castellano</td>
+                <td>
+                    <a href="detalle.html"><button>🔭 Ver</button></a>
+                    <a href="editar.html"><button>✍🏽 Editar</button></a>
+                    <a href="#"><button onclick="borrarPelicula()">❌ Eliminar</button></a><a href="#"><button onclick="borrarPelicula">❌ Eliminar</button></a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
