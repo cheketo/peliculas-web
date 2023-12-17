@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>✍🏽 Editar Película</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1 id="NombrePelicula"></h1>
+        </div>
+        <a href="index.html"><button>⬅ Volver</button></a>
+        <table class="form">
+            <tr>
+                <th><h2>💬 Título</h2></th>
+                <td>
+                    <input type="text" name="title" id="title" validate-empty="Ingrese un título de película" validate-min-length="4" validate-min-length-msg="El título debe tener al menos 4 caracteres">
+                    <span class="error" id="title-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>🎬 Género</h2></th>
+                <td>
+                    <select id="genre" validate-empty="Seleccione un género">
+                        <option value="">Seleccionar un género</option>
+                    </select>
+                    <span class="error" id="genre-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>🧾 Descripción</h2></th>
+                <td>
+                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                    <span class="error" id="description-error"></span>
+                </td>
+                
+            </tr>
+            <tr>
+                <th><h2>😎 Director</h2></th>
+                <td><select name="director" id="director" validate-empty="Seleccione un director">
+                    <option value="">Seleccionar un director</option>
+                </select>
+                <span class="error" id="director-error"></span>
+            </td>
+            </tr>
+            <tr>
+                <th><h2>👨‍👩‍👦‍👦 Reparto</h2></th>
+                <td>
+                    <select name="cast" id="cast" multiple validate-empty="Seleccione al menos una persona">
+                    </select>
+                    <span class="error" id="cast-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>⏱ Duración (en minutos)</h2></th>
+                <td>
+                    <input type="text" name="length" id="length" validate-function="validateInteger" validate-function-validateInteger-msg="Por favor, ingrese solo números enteros">
+                    <span class="error" id="length-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>📅 Fecha de Estreno</h2></th>
+                <td>
+                    <input type="date" name="release" id="release" validate-function="validateDate" validate-function-validateDate-msg="Por favor, ingrese una fecha correcta">
+                    <span class="error" id="release-error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="last-row">
+                    <button class="submit-button" onclick="editarPelicula()">✅ Guardar Cambios</button>
+                </td>
+            </tr>
+        </table>
+        <script src="https://unpkg.com/nojs-validator/nojs-validator.js"></script>
+        <script src="js/helpers.js"></script>
+        <script src="js/validador.js"></script>
+        <script src="js/reparto.js"></script>
+        <script src="js/directores.js"></script>
+        <script src="js/generos.js"></script>
+        <script src="js/obtener_pelicula.js"></script>
+        <script src="js/editar.js"></script>
+    </body>
+</html>

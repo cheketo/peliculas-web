@@ -55,7 +55,7 @@ function actualizarListadoPeliculas(peliculas) {
         var actionsCell = row.insertCell(5);
         // Agregar enlaces para ver, editar y eliminar (puedes ajustar los enlaces según tus necesidades)
         actionsCell.innerHTML = `<a href="detalle.html"><button>🔭 Ver</button></a>
-                                 <a href="editar.html"><button>✍🏽 Editar</button></a>
+                                 <a href="editar.html?id=${pelicula.id}"><button>✍🏽 Editar</button></a>
                                  <a href="#"><button>❌ Eliminar</button></a>`;
     });
 }
