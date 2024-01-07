@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>🎥 Detalle de Película</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1 id="NombrePelicula"></h1>
+        </div>
+        <a href="index.html"><button>⬅ Volver</button></a>
+        <table class="form table-detail">
+            <tr>
+                <th><h2>💬 Título</h2></th>
+                <td>
+                    <span name="title" id="title"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>🎬 Género</h2></th>
+                <td>
+                    <span name="genre" id="genre"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>🧾 Descripción</h2></th>
+                <td>
+                    <span name="description" id="description"></span>
+                </td>
+                
+            </tr>
+            <tr>
+                <th><h2>😎 Director</h2></th>
+                <td>
+                    <span name="director" id="director"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>👨‍👩‍👦‍👦 Reparto</h2></th>
+                <td>
+                    <span name="cast" id="cast"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>⏱ Duración (en minutos)</h2></th>
+                <td>
+                    <span name="length" id="length"></span>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>📅 Fecha de Estreno</h2></th>
+                <td>
+                    <span name="release" id="release"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="last-row">
+                    <a href="index.html"><button class="submit-button">⬅ Volver</button></a>
+                </td>
+            </tr>
+        </table>
+        <script src="https://unpkg.com/nojs-validator/nojs-validator.js"></script>
+        <script src="js/helpers.js"></script>
+        <script src="js/validador.js"></script>
+        <!-- <script src="js/reparto.js"></script>
+        <script src="js/directores.js"></script>
+        <script src="js/generos.js"></script> -->
+        <script src="js/obtener_pelicula.js"></script>
+        <script src="js/detalle.js"></script>
+    </body>
+</html>

@@ -3,10 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
     obtenerPeliculas();
 });
 
-function obtenerPeliculas()
+function obtenerPeliculas( search = null )
 {
     // URL de la API
     var apiUrl = 'https://api.peliculas.vm/peliculas';
+
+    if( search )
+    {
+        apiUrl += '?search=' + search;
+    }
 
     // Realizar una solicitud GET a la API
     fetch(apiUrl)
@@ -26,6 +31,12 @@ function obtenerPeliculas()
         .catch(error => {
             console.error('Error al obtener datos de la API:', error);
         });
+}
+
+function search()
+{
+    var search = document.getElementById('search').value;
+    obtenerPeliculas( search );
 }
 
 function mostrarMensajeSinPeliculas()
@@ -48,9 +59,9 @@ function actualizarListadoPeliculas(peliculas) {
         // Crear celdas y agregar datos de la película
         var titleCell = row.insertCell(0);
         titleCell.textContent = pelicula.titulo;
-
+        
         var genreCell = row.insertCell(1);
-        genreCell.textContent = pelicula.genero.nombre;
+        genreCell.textContent = capitalizarPrimeraLetra( pelicula.genero.nombre );
 
         var descriptionCell = row.insertCell(2);
         descriptionCell.textContent = pelicula.descripcion;
@@ -68,7 +79,7 @@ function actualizarListadoPeliculas(peliculas) {
         var actionsCell = row.insertCell(5);
         var botonId = 'boton-borrar-' + pelicula.id;
         // Agregar enlaces para ver, editar y eliminar (puedes ajustar los enlaces según tus necesidades)
-        actionsCell.innerHTML = `<a href="detalle.html"><button>🔭 Ver</button></a>
+        actionsCell.innerHTML = `<a href="detalle.html?id=${pelicula.id}"><button>🔭 Ver</button></a>
                                  <a href="editar.html?id=${pelicula.id}"><button>✍🏽 Editar</button></a>
                                  <button id="${botonId}" data-id="${pelicula.id}" data-titulo="${pelicula.titulo}">❌ Eliminar</button>`;
         asociarBotonAFuncion( botonId );

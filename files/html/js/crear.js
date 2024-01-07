@@ -67,7 +67,6 @@ function crearPelicula()
         director: director,
         cast: cast
     };
-    console.log( 'Request', data);
     // Realizar la petición POST a la API
     fetch('https://api.peliculas.vm/crear-pelicula?title=' + title + '&genre=' + genre + '&description=' + description + '&director=' + director + '&cast=' + cast + '&length=' + length + '&release=' + release + '', {
         method: 'GET',
@@ -90,6 +89,7 @@ function crearPelicula()
         console.log('Respuesta de la API:', responseData);
         // Aquí podrías realizar alguna acción con la respuesta, como mostrar un mensaje de éxito
         alert('Película creada exitosamente');
+        window.location.href = 'index.html';
     })
     .catch(error => {
         // Manejar errores en la solicitud

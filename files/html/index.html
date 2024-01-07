@@ -5,13 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Películas</title>
         <link rel="stylesheet" href="css/main.css">
+        <script src="js/helpers.js"></script>
         <script src="js/peliculas.js"></script>
     </head>
     <body>
         <div class="header">
             <h1>Películas</h1>
         </div>
-        <a href="crear.html"><button>➕ Crear</button></a>
+        <div>
+            <a href="crear.html"><button>➕ Crear</button></a>
+            <input type="text" name="search" id="search" placeholder="Buscar..." onkeyup="search()">
+            <button onclick="search()">🔎</button>
+        </div>
         <table>
             <thead>
             <tr>
